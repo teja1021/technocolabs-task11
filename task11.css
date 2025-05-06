@@ -1,0 +1,257 @@
+body {
+    background-image: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-6/htmlcss1-img_foodlogo.png");
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #05A8AA;
+}
+
+nav {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+nav img {
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+nav img:hover {
+    transform: scale(1.1);
+}
+
+nav span {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 10px 15px;
+}
+
+nav a {
+    color: #666666;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #05A8AA;
+    text-decoration: underline;
+}
+
+.content {
+    width: 100%;
+    height: 500px;
+    margin: 10px auto;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    background-image: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-6/htmlcss1-img_burgerphoto.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 168, 170, 0.5);
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.header h1 {
+    background-color: rgba(5, 168, 170, 0.8);
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    width: 70%;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: moveUpDown 2s infinite ease-in-out;
+}
+
+@keyframes moveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.content .body {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.body p {
+    color: #333333;
+    font-weight: 300;
+    line-height: 1.8;
+    width: 90%;
+    margin: 18px auto;
+    font-size: 18px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.button {
+    width: 200px;
+    padding: 20px;
+    margin: 40px auto;
+    border: 2px solid #05A8AA;
+    border-radius: 8px;
+    color: #05A8AA;
+    display: block;
+    font-weight: 700;
+    text-align: center;
+    background-color: transparent;
+    transition: all 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #05A8AA;
+    color: #FFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+ul.nutrition {
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+ul.nutrition li {
+    display: inline-block;
+    background-color: #05A8AA;
+    list-style: none;
+    width: 200px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+ul.nutrition li:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nutrition .category {
+    color: white;
+    font-weight: 300;
+    letter-spacing: 2px;
+    display: block;
+    font-size: 14px;
+}
+
+.nutrition .value {
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(5, 168, 170, 0.9);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
